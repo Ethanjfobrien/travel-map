@@ -1,63 +1,26 @@
 <!DOCTYPE html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-  <title>Travel Map</title>
-  <style>
-      body { 
-  background: url(celo-sunrise.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-    body {
-           background: url(celo-sunrise.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-      text-align: center;
-      color: white;
-      font-family: helvetica;
-    }
     
-    p{
-      font-size: 22px;
-    }
+<!--    Include Leaflet-->
+    <link rel="stylesheet" href="leaflet-0.7.2/leaflet.css" />
+    <script src="leaflet-0.7.2/leaflet.js"></script>
+<!--    -->
     
-    input{
-      border: 0;
-      padding: 10px;
-      font-size: 18px;
-    }
-    
-    input[type="submit"]{
-      color: white;
-      background: red;
-    }
-      
-    #container {
-      background: none;
-    }
-      
-    #map {
-        background: #000;
-        height: 100px;
-        width: 100px;
-    }
-      
-    .centered {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      margin-top: -50px;
-      margin-left: -50px;
-    }
-      
-  </style>
+    <link rel="stylesheet" href="main.css"/>
+
+  <title>Travel Map 2014</title>
 </head>
 <body>
     <div id="container">
         <div id="map" class="centered"></div>
     </div>
 </body>
+<script>
+            var map = L.map('map').setView([-9, 126], 8);
+
+// add an OpenStreetMap tile layer
+            L.tileLayer('http://otile1.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors,Tiles Courtesy of <a href="http://www.mapquest.com/" target="_blank">MapQuest</a>'
+            }).addTo(map);
+    </script>
