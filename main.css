@@ -24,19 +24,21 @@
     }
       
     #container {
-      background: none;
+        background: none;
+        width:70%;
+        margin: 0 15% 15% 15% ;
+        height: 100%;
     }
       
     #map {
-        position: fixed;
+        position: relative;
         background: #fff;
-        height: 400px;
-        width:70%;
-        margin: 0 15% 0 15% ;
-        border-radius: 10px;
+        height: 70%;
+        width: 100%;
+        border: 8px solid rgba(80, 69, 116, 0.73);
+        -webkit-border-radius: 8px;         
+        -moz-border-radius: 8px;          
+        border-radius: 8px;
+        margin-bottom: 200px;
     }
       
-    .centered {
-      top: 25%;
-      margin-top: -200px;
-    }
